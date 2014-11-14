@@ -1,0 +1,55 @@
+.container {
+  margin: auto;
+  width: 600px;
+  border: dotted gray 1px;
+  padding: 15px;
+}
+
+#wrap{
+  position: relative;
+}
+
+#staff_image {
+  display: block;
+  width: 300px;
+
+}
+
+#whole_note{
+  width: 35px;
+  position: absolute;
+  left: 161px;
+  bottom: 120px;
+}
+
+#letter_choices{
+  font-family: arial;
+  font-size: 2.5em;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.letter{
+  display: inline-block;
+  border-radius: 10px;
+  border: 3px solid green;
+}
+
+.letter_link_class:hover{
+  color: red;
+}
+
+.letter_link_class:link{
+  text-decoration: none;
+}
+
+.letter_link_class:visited {
+    text-decoration: none;
+}
+
+/*#answer_display{
+  font: 3em;
+}
+*/
+
+

@@ -1,7 +1,40 @@
 $(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+// Once a link is chosen, randomly change the position of the whole_note div.
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $('.letter_link_class').on('click', function(event){
+
+    event.preventDefault();
+
+    var currentPosition = $("#whole_note").css("bottom")
+    var letterChosen = $(this).html();
+
+    var request1 = $.ajax({
+      url: "/game/guess",
+      type: "get",
+      data: {letter: letterChosen, currentPosition: currentPosition}
+    })
+
+    request1.done(function(response){
+
+      console.log(response.correct);
+      // Reveal whether answer correct
+
+      if (response.correct){
+        $("#answer_display").html("That's correct");
+      }
+      else{
+        $("#answer_display").html("Wrong!  Try again.");
+      }
+      // update position of whole note
+      $("#whole_note").css("bottom", response.bottom)
+
+
+    })
+
+
+
+
+
+  })
+
 });
