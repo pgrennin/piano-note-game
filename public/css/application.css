@@ -47,9 +47,11 @@
     text-decoration: none;
 }
 
-/*#answer_display{
-  font: 3em;
+#answer_display{
+  font-size: 2.5em;
+  margin-left: 50px;
+  margin-top: 30px;
 }
-*/
+
 
 

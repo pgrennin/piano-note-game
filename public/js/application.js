@@ -15,15 +15,16 @@ $(document).ready(function() {
     })
 
     request1.done(function(response){
-
-      console.log(response.correct);
+      $("#stats").html(response.percentCorrect);
+      // console.log(response.correct);
       // Reveal whether answer correct
 
       if (response.correct){
-        $("#answer_display").html("That's correct");
+        $("#answer_display").html("That's correct!");
       }
       else{
-        $("#answer_display").html("Wrong!  Try again.");
+        $("#answer_display").html(response.wrongResponse);
+        // $("#answer_display").css("color", "red");
       }
       // update position of whole note
       $("#whole_note").css("bottom", response.bottom)
