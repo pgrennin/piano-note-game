@@ -76,5 +76,4 @@ get "/game/guess" do
     wrongResponse: wrong_answer_response,
     percentCorrect: percent_correct
     }.to_json
-
 end
